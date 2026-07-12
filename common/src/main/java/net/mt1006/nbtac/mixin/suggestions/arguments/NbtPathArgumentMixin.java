@@ -118,7 +118,7 @@ public abstract class NbtPathArgumentMixin implements ArgumentType<CompoundTag>
 
 			case "entity":
 				EntitySelector entitySelector = ctx.getArgument(entityArgument, EntitySelector.class);
-				return Utils.entityFromEntitySelector(entitySelector);
+				return Utils.resolveEntityType(entitySelector, ctx.getInput(), ctx.getRange().getStart());
 		}
 		return null;
 	}

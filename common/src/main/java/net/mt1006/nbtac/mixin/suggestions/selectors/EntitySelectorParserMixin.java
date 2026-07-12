@@ -67,7 +67,7 @@ public class EntitySelectorParserMixin
 	@Unique private CompletableFuture<Suggestions> suggestNbt(SuggestionsBuilder builder, Consumer<SuggestionsBuilder> consumer)
 	{
 		String str = builder.getRemaining();
-		String name = Utils.entityFromSelectorData(type, entityUUID, playerName);
+		String name = Utils.resolveEntityType(type, entityUUID, playerName, builder.getInput(), builder.getStart());
 		return SuggestionManager.loadFromName(str, name, builder, false);
 	}
 }
