@@ -73,7 +73,14 @@ public abstract class CompoundTagArgumentMixin implements ArgumentType<CompoundT
 
 			case "entity":
 				EntitySelector entitySelector = ctx.getArgument("target", EntitySelector.class);
+<<<<<<< Updated upstream:common/src/main/java/com/mt1006/nbt_ac/mixin/suggestions/arguments/CompoundTagArgumentMixin.java
 				return Utils.entityFromEntitySelector(entitySelector);
+=======
+				return Utils.resolveEntityType(entitySelector, ctx.getInput(), ctx.getRange().getStart());
+
+			default:
+				return null;
+>>>>>>> Stashed changes:common/src/main/java/net/mt1006/nbtac/mixin/suggestions/arguments/CompoundTagArgumentMixin.java
 		}
 		return null;
 	}

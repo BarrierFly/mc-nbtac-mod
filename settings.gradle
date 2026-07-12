@@ -3,8 +3,12 @@ pluginManagement
 	repositories
 	{
 		gradlePluginPortal()
+<<<<<<< Updated upstream
 		maven { url = "https://maven.fabricmc.net" }
 		maven { url = "https://maven.neoforged.net/releases/" }
+=======
+		maven { url = 'https://maven.fabricmc.net' }
+>>>>>>> Stashed changes
 	}
 }
 
@@ -13,4 +17,8 @@ plugins
 	id "org.gradle.toolchains.foojay-resolver-convention" version "1.0.0"
 }
 
+<<<<<<< Updated upstream
 include "common", "fabric", "neoforge"
+=======
+include 'common', 'fabric'
+>>>>>>> Stashed changes

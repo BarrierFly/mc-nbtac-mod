@@ -12,6 +12,7 @@ subprojects
 	{
 		var replaceProperties =
 		[
+<<<<<<< Updated upstream
 			"mod_name"                  : mod_name,
 			"mod_jar_name"              : mod_jar_name,
 			"mod_id"                    : mod_id,
@@ -33,6 +34,27 @@ subprojects
 		]
 
 		filesMatching(["pack.mcmeta", "fabric.mod.json", "META-INF/neoforge.mods.toml", "*.mixins.json"])
+=======
+			'mod_name'                  : mod_name,
+			'mod_jar_name'              : mod_jar_name,
+			'mod_id'                    : mod_id,
+			'mod_group'                 : mod_group,
+			'mod_author'                : mod_author,
+			'version'                   : version,
+			'license'                   : license,
+			'homepage'                  : homepage,
+			'source_url'                : source_url,
+			'issue_tracker'             : issue_tracker,
+			'mod_description'           : mod_description,
+			'minecraft_version'         : minecraft_version,
+			'java_version'              : java_version,
+			'version_range_fabric'      : version_range_fabric,
+			'fabric_loader_version'     : fabric_loader_version,
+			'fabric_api_version'        : fabric_api_version,
+		]
+
+		filesMatching(['pack.mcmeta', 'fabric.mod.json', '*.mixins.json'])
+>>>>>>> Stashed changes
 		{
 			expand replaceProperties
 		}
