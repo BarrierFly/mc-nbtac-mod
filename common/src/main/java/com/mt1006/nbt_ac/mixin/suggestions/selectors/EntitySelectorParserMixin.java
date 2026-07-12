@@ -66,9 +66,15 @@ public class EntitySelectorParserMixin
 
 	@Unique private CompletableFuture<Suggestions> suggestNbt(SuggestionsBuilder suggestionsBuilder, Consumer<SuggestionsBuilder> consumer)
 	{
+<<<<<<< Updated upstream:common/src/main/java/com/mt1006/nbt_ac/mixin/suggestions/selectors/EntitySelectorParserMixin.java
 		String name = Utils.entityFromSelectorData(type, entityUUID, playerName);
 		String tag = suggestionsBuilder.getRemaining();
 
 		return NbtSuggestionManager.loadFromName(name, tag, suggestionsBuilder, false);
+=======
+		String str = builder.getRemaining();
+		String name = Utils.resolveEntityType(type, entityUUID, playerName, builder.getInput(), builder.getStart());
+		return SuggestionManager.loadFromName(str, name, builder, false);
+>>>>>>> Stashed changes:common/src/main/java/net/mt1006/nbtac/mixin/suggestions/selectors/EntitySelectorParserMixin.java
 	}
 }
