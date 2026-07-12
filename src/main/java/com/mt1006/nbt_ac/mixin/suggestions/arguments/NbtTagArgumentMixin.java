@@ -76,7 +76,7 @@ abstract public class NbtTagArgumentMixin implements ArgumentType<Tag>
 
 			case "entity":
 				EntitySelector entitySelector = commandContext.getArgument("target", EntitySelector.class);
-				root = MixinUtils.entityFromEntitySelector(entitySelector);
+				root = MixinUtils.resolveEntityType(entitySelector, commandContext.getInput(), commandContext.getRange().getStart());
 				break;
 
 			default:

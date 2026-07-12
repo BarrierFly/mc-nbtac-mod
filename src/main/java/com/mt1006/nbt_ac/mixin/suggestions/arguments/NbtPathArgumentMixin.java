@@ -118,7 +118,7 @@ abstract public class NbtPathArgumentMixin implements ArgumentType<CompoundTag>
 
 			case "entity":
 				EntitySelector entitySelector = commandContext.getArgument(entityArgument, EntitySelector.class);
-				return MixinUtils.entityFromEntitySelector(entitySelector);
+				return MixinUtils.resolveEntityType(entitySelector, commandContext.getInput(), commandContext.getRange().getStart());
 		}
 		return null;
 	}
